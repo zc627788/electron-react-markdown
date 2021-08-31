@@ -7,7 +7,8 @@ app.on('ready',()=>{
     height:600,
     webPreferences:{
       nodeIntegration:true,
-      contextIsolation: false,
+      contextIsolation: false, //renderer里面用require
+      enableRemoteModule:true //开启remote
     }
   })
   mainWindow.loadFile('index.html')
